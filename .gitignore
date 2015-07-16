@@ -1,0 +1,7 @@
+*.g*
+!.gitignore
+latex/
+deque-tests/
+.DS_Store
+Doxyfile
+TestDeque
