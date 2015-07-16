@@ -27,7 +27,7 @@ class Graph {
   // --------
 
   typedef int vertex_descriptor;  // fix!
-  typedef int edge_descriptor;    // fix!
+  typedef int edge_descriptor; 
 
   typedef int* vertex_iterator;    // fix!
   typedef int* edge_iterator;      // fix!
