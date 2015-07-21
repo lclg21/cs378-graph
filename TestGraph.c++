@@ -62,7 +62,7 @@ TYPED_TEST_CASE(TestGraph, graph_types);
 // add_edge
 // --------
 
-TYPED_TEST(TestGraph, test_add_edge1) {
+TYPED_TEST(TestGraph, add_edge1) {
   typedef typename TestFixture::graph_type         graph_type;
   typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
 
@@ -72,12 +72,9 @@ TYPED_TEST(TestGraph, test_add_edge1) {
   vertex_descriptor vdB = add_vertex(g);
 
   bool b = add_edge(vdA, vdB, g).second;
-  ASSERT_TRUE(b);
-  add_edge(vdA, vdB, g);
-  bool c = add_edge(vdA, vdB, g).second;
-  ASSERT_FALSE(c);}
+  ASSERT_TRUE(b);}
 
-TYPED_TEST(TestGraph, test_add_edge2) {
+TYPED_TEST(TestGraph, add_edge2) {
   typedef typename TestFixture::graph_type         graph_type;
   typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
 
@@ -90,9 +87,11 @@ TYPED_TEST(TestGraph, test_add_edge2) {
   bool b = add_edge(vdA, vdB, g).second;
   ASSERT_TRUE(b);
   bool c = add_edge(vdA, vdC, g).second;
-  ASSERT_TRUE(c);}
+  ASSERT_TRUE(c);
+  bool d = add_edge(vdA, vdC, g).second;
+  ASSERT_FALSE(d);}
 
-TYPED_TEST(TestGraph, test_add_edge3) {
+TYPED_TEST(TestGraph, add_edge3) {
   typedef typename TestFixture::graph_type         graph_type;
 
   graph_type g;
@@ -165,7 +164,6 @@ TYPED_TEST(TestGraph, edge_2) {
   vertex_descriptor v = 1;
   auto p1 = add_edge(u, v, g);
   auto p2 = edge(u, v, g);
-  ASSERT_TRUE(p2.second);
   ASSERT_EQ(p2.first, p1.first);
 }
 
@@ -426,14 +424,10 @@ TYPED_TEST(TestGraph, vertex_3) {
   add_vertex(g);
   add_vertex(g);
   add_vertex(g);
-  add_vertex(g);
-  add_vertex(g);
-  add_vertex(g);
-  add_vertex(g);
   auto u = add_vertex(g);
   add_vertex(g);
   add_vertex(g);
-  ASSERT_EQ(u, vertex(9, g));
+  ASSERT_EQ(u, vertex(5, g));
 }
 
 // --------
@@ -473,18 +467,11 @@ TYPED_TEST(TestGraph, vertices_3) {
 // constructor
 // -----------
 
-TYPED_TEST(TestGraph, constructor_1) {
+TYPED_TEST(TestGraph, constructor) {
   typedef typename TestFixture::graph_type         graph_type;
     
   graph_type g;
   ASSERT_EQ(0, num_vertices(g));
-}
-
-TYPED_TEST(TestGraph, constructor_2) {
-  typedef typename TestFixture::graph_type         graph_type;
-    
-  graph_type g;
-  ASSERT_EQ(0, num_edges(g));
 }
 
 
