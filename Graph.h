@@ -45,13 +45,13 @@ class Graph {
    * @param v1 vertex descriptor
    * @param v2 vertex descriptor
    * @param graph graph by reference
-   * @return pair as a tuple with edge ad true if added, false otherwise
+   * @return pair as a tuple with edge and true if added, false otherwise
    */
   friend std::pair<edge_descriptor, bool> add_edge (vertex_descriptor v1, vertex_descriptor v2, Graph& graph) {
-    //your code
     edge_descriptor ed = std::make_pair(v1, v2);
     bool            b  = false;
-    
+    graph._e.push_back(ed);
+    graph._g[ed.first].push_back(ed.second);
     return std::make_pair(ed, b);}
 
   // ----------
@@ -93,9 +93,19 @@ class Graph {
    * @return pair with an edge and true if it exists, false otherwise
    */
   friend std::pair<edge_descriptor, bool> edge (vertex_descriptor v1, vertex_descriptor v2, const Graph& graph) {
-    // <your code>
     edge_descriptor ed = std::make_pair(v1, v2);
     bool            b  = true;
+
+    std::vector<edge_descriptor>::const_iterator b1 = graph._e.begin();
+    std::vector<edge_descriptor>::const_iterator e = graph._e.end();
+
+    while(b1 != e){
+      if (*b1 == ed){
+        b = true;
+        break;
+      }
+      ++b1;
+    }    
     return std::make_pair(ed, b);}
 
   // -----

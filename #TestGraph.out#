@@ -1,0 +1,140 @@
+B==325== Memcheck, a memory error detector
+==325== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==325== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==325== Command: ./TestGraph
+==325== 
+R0;136;0cunning main() from gtest_main.cc
+[==========] Running 72 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 36 tests from TestGraph/0, where TypeParam = boost::adjacency_list<boost::setS, boost::vecS, boost::directedS, boost::no_property, boost::no_property, boost::no_property, boost::listS>
+[ RUN      ] TestGraph/0.add_edge_1
+[       OK ] TestGraph/0.add_edge_1 (112 ms)
+[ RUN      ] TestGraph/0.add_edge_2
+[       OK ] TestGraph/0.add_edge_2 (10 ms)
+[ RUN      ] TestGraph/0.add_edge_3
+[       OK ] TestGraph/0.add_edge_3 (9 ms)
+[ RUN      ] TestGraph/0.add_vertex_1
+[       OK ] TestGraph/0.add_vertex_1 (5 ms)
+[ RUN      ] TestGraph/0.add_vertex_2
+[       OK ] TestGraph/0.add_vertex_2 (5 ms)
+[ RUN      ] TestGraph/0.add_vertex_3
+[       OK ] TestGraph/0.add_vertex_3 (5 ms)
+[ RUN      ] TestGraph/0.adjacent_vertices_1
+[       OK ] TestGraph/0.adjacent_vertices_1 (27 ms)
+[ RUN      ] TestGraph/0.adjacent_vertices_2
+[       OK ] TestGraph/0.adjacent_vertices_2 (12 ms)
+[ RUN      ] TestGraph/0.adjacent_vertices_3
+[       OK ] TestGraph/0.adjacent_vertices_3 (4 ms)
+[ RUN      ] TestGraph/0.edge_1
+[       OK ] TestGraph/0.edge_1 (14 ms)
+[ RUN      ] TestGraph/0.edge_2
+[       OK ] TestGraph/0.edge_2 (8 ms)
+[ RUN      ] TestGraph/0.edge_3
+[       OK ] TestGraph/0.edge_3 (5 ms)
+[ RUN      ] TestGraph/0.edges_1
+[       OK ] TestGraph/0.edges_1 (35 ms)
+[ RUN      ] TestGraph/0.edges_2
+[       OK ] TestGraph/0.edges_2 (5 ms)
+[ RUN      ] TestGraph/0.edges_3
+[       OK ] TestGraph/0.edges_3 (9 ms)
+[ RUN      ] TestGraph/0.num_edges_1
+[       OK ] TestGraph/0.num_edges_1 (15 ms)
+[ RUN      ] TestGraph/0.num_edges_2
+[       OK ] TestGraph/0.num_edges_2 (4 ms)
+[ RUN      ] TestGraph/0.num_edges_3
+[       OK ] TestGraph/0.num_edges_3 (5 ms)
+[ RUN      ] TestGraph/0.num_vertices_1
+[       OK ] TestGraph/0.num_vertices_1 (4 ms)
+[ RUN      ] TestGraph/0.num_vertices_2
+[       OK ] TestGraph/0.num_vertices_2 (4 ms)
+[ RUN      ] TestGraph/0.num_vertices_3
+[       OK ] TestGraph/0.num_vertices_3 (3 ms)
+[ RUN      ] TestGraph/0.num_vertices_4
+[       OK ] TestGraph/0.num_vertices_4 (5 ms)
+[ RUN      ] TestGraph/0.source_1
+[       OK ] TestGraph/0.source_1 (4 ms)
+[ RUN      ] TestGraph/0.source_2
+[       OK ] TestGraph/0.source_2 (4 ms)
+[ RUN      ] TestGraph/0.source_3
+[       OK ] TestGraph/0.source_3 (7 ms)
+[ RUN      ] TestGraph/0.target_1
+[       OK ] TestGraph/0.target_1 (5 ms)
+[ RUN      ] TestGraph/0.target_2
+[       OK ] TestGraph/0.target_2 (4 ms)
+[ RUN      ] TestGraph/0.target_3
+[       OK ] TestGraph/0.target_3 (6 ms)
+[ RUN      ] TestGraph/0.vertex_1
+[       OK ] TestGraph/0.vertex_1 (4 ms)
+[ RUN      ] TestGraph/0.vertex_2
+[       OK ] TestGraph/0.vertex_2 (5 ms)
+[ RUN      ] TestGraph/0.vertex_3
+[       OK ] TestGraph/0.vertex_3 (7 ms)
+[ RUN      ] TestGraph/0.vertices_1
+[       OK ] TestGraph/0.vertices_1 (5 ms)
+[ RUN      ] TestGraph/0.vertices_2
+[       OK ] TestGraph/0.vertices_2 (4 ms)
+[ RUN      ] TestGraph/0.vertices_3
+[       OK ] TestGraph/0.vertices_3 (5 ms)
+[ RUN      ] TestGraph/0.constructor_1
+[       OK ] TestGraph/0.constructor_1 (3 ms)
+[ RUN      ] TestGraph/0.constructor_2
+[       OK ] TestGraph/0.constructor_2 (4 ms)
+[----------] 36 tests from TestGraph/0 (395 ms total)
+
+[----------] 36 tests from TestGraph/1, where TypeParam = Graph
+[ RUN      ] TestGraph/1.add_edge_1
+TestGraph.c++:77: Failure
+Value of: p1.second
+  Actual: false
+Expected: true
+[  FAILED  ] TestGraph/1.add_edge_1, where TypeParam = Graph (155 ms)
+[ RUN      ] TestGraph/1.add_edge_2
+==325== Invalid read of size 8
+==325==    at 0x4074F8: std::vector<int, std::allocator<int> >::push_back(int const&) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x4062A4: add_edge(int, int, Graph&) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x43217F: TestGraph_add_edge_2_Test<Graph>::TestBody() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x46A0DC: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x462A96: testing::Test::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x462B6C: testing::TestInfo::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x462CB6: testing::TestCase::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x462F46: testing::internal::UnitTestImpl::RunAllTests() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x469C5C: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x46213A: testing::UnitTest::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x404934: main (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==325== 
+==325== 
+==325== Process terminating with default action of signal 11 (SIGSEGV)
+==325==  Access not within mapped region at address 0x8
+==325==    at 0x4074F8: std::vector<int, std::allocator<int> >::push_back(int const&) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x4062A4: add_edge(int, int, Graph&) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x43217F: TestGraph_add_edge_2_Test<Graph>::TestBody() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x46A0DC: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x462A96: testing::Test::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x462B6C: testing::TestInfo::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x462CB6: testing::TestCase::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x462F46: testing::internal::UnitTestImpl::RunAllTests() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x469C5C: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x46213A: testing::UnitTest::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==    by 0x404934: main (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
+==325==  If you believe this happened as a result of a stack
+==325==  overflow in your program's main thread (unlikely but
+==325==  possible), you can try to increase the size of the
+==325==  main thread stack using the --main-stacksize= flag.
+==325==  The main thread stack size used in this run was 16777216.
+==325== 
+==325== HEAP SUMMARY:
+==325==     in use at exit: 28,554 bytes in 478 blocks
+==325==   total heap usage: 2,615 allocs, 2,137 frees, 184,300 bytes allocated
+==325== 
+==325== LEAK SUMMARY:
+==325==    definitely lost: 0 bytes in 0 blocks
+==325==    indirectly lost: 0 bytes in 0 blocks
+==325==      possibly lost: 12,328 bytes in 218 blocks
+==325==    still reachable: 16,226 bytes in 260 blocks
+==325==         suppressed: 0 bytes in 0 blocks
+==325== Rerun with --leak-check=full to see details of leaked memory
+==325== 
+==325== For counts of detected and suppressed errors, rerun with: -v
+==325== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 2 from 2)
+Segmentation fault (core dumped)
