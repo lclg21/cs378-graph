@@ -140,48 +140,8 @@ TYPED_TEST(TestGraph, add_vertex_3) {
   ASSERT_EQ(4, num_vertices(g));
 }
 
-// -----------------
-// adjacent_vertices
-// -----------------
-/*
-TYPED_TEST(TestGraph, adjacent_vertices_1) {
-  typedef typename TestFixture::graph_type         graph_type;
-  typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
-    
-  graph_type g;
-  vertex_descriptor u = 0;
-  vertex_descriptor v = 1;
-  add_edge(u, v, g);
-  auto p = adjacent_vertices(u, g);
-  ASSERT_EQ(p.second, ++p.first);
-  }
 
-TYPED_TEST(TestGraph, adjacent_vertices_2) {
-  typedef typename TestFixture::graph_type         graph_type;
-  typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
-    
-  graph_type g;
-  vertex_descriptor u = 0;
-  vertex_descriptor v = 1;
-  vertex_descriptor w = 2;
-  add_edge(u, v, g);
-  add_edge(u, w, g);
-  auto p = adjacent_vertices(u, g);
-  ASSERT_EQ(p.second, ++++p.first);
-}
 
-TYPED_TEST(TestGraph, adjacent_vertices_3) {
-  typedef typename TestFixture::graph_type         graph_type;
-  typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
-    
-  graph_type g;
-  vertex_descriptor u = 0;
-  vertex_descriptor v = 1;
-  add_edge(v, u, g);
-  auto p = adjacent_vertices(u, g);
-  ASSERT_EQ(p.second, p.first);
-  }
-*/
 // ----
 // edge
 // ----
@@ -526,3 +486,37 @@ TYPED_TEST(TestGraph, constructor_2) {
   graph_type g;
   ASSERT_EQ(0, num_edges(g));
 }
+
+
+// -----------------
+// adjacent_vertices
+// -----------------
+
+TYPED_TEST(TestGraph, test_adjacent_vertices) {
+  typedef typename TestFixture::graph_type         graph_type;
+  typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
+
+  typedef typename TestFixture::adjacency_iterator adjacency_iterator;
+
+
+  graph_type g;
+
+  vertex_descriptor vdA = add_vertex(g);
+  vertex_descriptor vdB = add_vertex(g);
+  vertex_descriptor vdC = add_vertex(g);
+
+  add_edge(vdA, vdB, g);
+  add_edge(vdA, vdC, g);
+
+  pair<adjacency_iterator, adjacency_iterator> p = adjacent_vertices(vdA, g);
+  adjacency_iterator                           b = p.first;
+  adjacency_iterator                           e = p.second;
+  if (b != e) {
+    vertex_descriptor vd = *b;
+    ASSERT_EQ(vdB, vd);}
+  ++b;
+  if (b != e) {
+    vertex_descriptor vd = *b;
+    ASSERT_EQ(vdC, vd);}
+  ++b;
+  ASSERT_EQ(e, b);}
