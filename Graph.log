@@ -1,0 +1,83 @@
+commit fa2a9bbf67050a7d03cb8104facdf6eac80ce492
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 18:49:32 2015 -0500
+
+    created html/
+
+commit e6302ee76e75f9da37ba14da0b775eb469346c84
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 18:43:44 2015 -0500
+
+    closes #7, closes #8, added unit tests cases to improve coverage
+
+commit 512c88b2b62f18258241c0af12d40860d9e73d79
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 18:29:02 2015 -0500
+
+    fixed add_edge function, closes #14, closes #18, closes #19, closes #20
+
+commit 2fd1fbac103b5a98948abf6d58a46e37178b12d8
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 16:53:18 2015 -0500
+
+    finished function add_edge, closes #12, closes #13, closes #17, closes #15
+
+commit a7db9a0aa989f9bb86806b241c33fb6a5defdafe
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 16:02:50 2015 -0500
+
+    implemented add vertex
+
+commit e96c57da78748f7331361450dbecdf5adfb7373b
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 12:42:56 2015 -0500
+
+    implemented source and target, closes #6, closes #11, closes #16
+
+commit 64174d7ffc7ebc8f8b7d2d49df3658f25cfcdddb
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 12:31:15 2015 -0500
+
+    implemented num_edges and num_vertices
+
+commit 83ae65618398d2779b81c022472497f8acb15fa8
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 00:16:28 2015 -0500
+
+    added tests cases
+
+commit ac2e1ea495734fc9efe1991c59d403ba5c5c94ec
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Tue Jul 21 00:05:29 2015 -0500
+
+    added documentation to graph.h
+
+commit 09cd6bee477227699ca6a704dc998bb037082c5d
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Mon Jul 20 12:29:21 2015 -0500
+
+    corrected the type deifnitions
+
+commit 9d40580d2f2f91e5f0a4c3fe2b4ece3751d18bd8
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Thu Jul 16 00:56:07 2015 -0500
+
+    closes #1, closes #2, closes #3, closes #4, closes #5
+
+commit 71446116a27756fbac7549dacd6de9fec496ef99
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Thu Jul 16 00:34:22 2015 -0500
+
+    created graph.h and testgraph.c++
+
+commit 7b4b3e9aeaca3dc43f0bb1aad7ab9068ba3b64c1
+Author: Luis Lopez <lclg21@utexas.edu>
+Date:   Wed Jul 15 23:23:03 2015 -0500
+
+    created gitignore, makefile and travis.yml
+
+commit f6d324a00f7da632c3648f83ad8ead5db190f128
+Author: lclg21 <lclg21@utexas.edu>
+Date:   Wed Jul 15 23:11:24 2015 -0500
+
+    Initial commit
