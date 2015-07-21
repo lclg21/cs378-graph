@@ -1,46 +1,40 @@
-==383== Memcheck, a memory error detector
-==383== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==383== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==383== Command: ./TestGraph
-==383== 
+==3270== Memcheck, a memory error detector
+==3270== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==3270== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==3270== Command: ./TestGraph
+==3270== 
 Running main() from gtest_main.cc
-[==========] Running 72 tests from 2 test cases.
+[==========] Running 66 tests from 2 test cases.
 [----------] Global test environment set-up.
-[----------] 36 tests from TestGraph/0, where TypeParam = boost::adjacency_list<boost::setS, boost::vecS, boost::directedS, boost::no_property, boost::no_property, boost::no_property, boost::listS>
-[ RUN      ] TestGraph/0.add_edge_1
-[       OK ] TestGraph/0.add_edge_1 (113 ms)
-[ RUN      ] TestGraph/0.add_edge_2
-[       OK ] TestGraph/0.add_edge_2 (10 ms)
-[ RUN      ] TestGraph/0.add_edge_3
-[       OK ] TestGraph/0.add_edge_3 (10 ms)
+[----------] 33 tests from TestGraph/0, where TypeParam = boost::adjacency_list<boost::setS, boost::vecS, boost::directedS, boost::no_property, boost::no_property, boost::no_property, boost::listS>
+[ RUN      ] TestGraph/0.test_add_edge1
+[       OK ] TestGraph/0.test_add_edge1 (110 ms)
+[ RUN      ] TestGraph/0.test_add_edge2
+[       OK ] TestGraph/0.test_add_edge2 (8 ms)
+[ RUN      ] TestGraph/0.test_add_edge3
+[       OK ] TestGraph/0.test_add_edge3 (7 ms)
 [ RUN      ] TestGraph/0.add_vertex_1
-[       OK ] TestGraph/0.add_vertex_1 (5 ms)
+[       OK ] TestGraph/0.add_vertex_1 (4 ms)
 [ RUN      ] TestGraph/0.add_vertex_2
-[       OK ] TestGraph/0.add_vertex_2 (6 ms)
+[       OK ] TestGraph/0.add_vertex_2 (5 ms)
 [ RUN      ] TestGraph/0.add_vertex_3
 [       OK ] TestGraph/0.add_vertex_3 (6 ms)
-[ RUN      ] TestGraph/0.adjacent_vertices_1
-[       OK ] TestGraph/0.adjacent_vertices_1 (26 ms)
-[ RUN      ] TestGraph/0.adjacent_vertices_2
-[       OK ] TestGraph/0.adjacent_vertices_2 (12 ms)
-[ RUN      ] TestGraph/0.adjacent_vertices_3
-[       OK ] TestGraph/0.adjacent_vertices_3 (4 ms)
 [ RUN      ] TestGraph/0.edge_1
-[       OK ] TestGraph/0.edge_1 (14 ms)
+[       OK ] TestGraph/0.edge_1 (15 ms)
 [ RUN      ] TestGraph/0.edge_2
-[       OK ] TestGraph/0.edge_2 (7 ms)
+[       OK ] TestGraph/0.edge_2 (10 ms)
 [ RUN      ] TestGraph/0.edge_3
-[       OK ] TestGraph/0.edge_3 (4 ms)
+[       OK ] TestGraph/0.edge_3 (9 ms)
 [ RUN      ] TestGraph/0.edges_1
-[       OK ] TestGraph/0.edges_1 (34 ms)
+[       OK ] TestGraph/0.edges_1 (43 ms)
 [ RUN      ] TestGraph/0.edges_2
 [       OK ] TestGraph/0.edges_2 (5 ms)
 [ RUN      ] TestGraph/0.edges_3
-[       OK ] TestGraph/0.edges_3 (9 ms)
+[       OK ] TestGraph/0.edges_3 (10 ms)
 [ RUN      ] TestGraph/0.num_edges_1
 [       OK ] TestGraph/0.num_edges_1 (14 ms)
 [ RUN      ] TestGraph/0.num_edges_2
-[       OK ] TestGraph/0.num_edges_2 (4 ms)
+[       OK ] TestGraph/0.num_edges_2 (3 ms)
 [ RUN      ] TestGraph/0.num_edges_3
 [       OK ] TestGraph/0.num_edges_3 (5 ms)
 [ RUN      ] TestGraph/0.num_vertices_1
@@ -48,93 +42,521 @@ Running main() from gtest_main.cc
 [ RUN      ] TestGraph/0.num_vertices_2
 [       OK ] TestGraph/0.num_vertices_2 (5 ms)
 [ RUN      ] TestGraph/0.num_vertices_3
-[       OK ] TestGraph/0.num_vertices_3 (3 ms)
+[       OK ] TestGraph/0.num_vertices_3 (4 ms)
 [ RUN      ] TestGraph/0.num_vertices_4
 [       OK ] TestGraph/0.num_vertices_4 (4 ms)
 [ RUN      ] TestGraph/0.source_1
-[       OK ] TestGraph/0.source_1 (5 ms)
+[       OK ] TestGraph/0.source_1 (6 ms)
 [ RUN      ] TestGraph/0.source_2
-[       OK ] TestGraph/0.source_2 (4 ms)
+[       OK ] TestGraph/0.source_2 (5 ms)
 [ RUN      ] TestGraph/0.source_3
 [       OK ] TestGraph/0.source_3 (6 ms)
 [ RUN      ] TestGraph/0.target_1
-[       OK ] TestGraph/0.target_1 (5 ms)
+[       OK ] TestGraph/0.target_1 (4 ms)
 [ RUN      ] TestGraph/0.target_2
 [       OK ] TestGraph/0.target_2 (5 ms)
 [ RUN      ] TestGraph/0.target_3
-[       OK ] TestGraph/0.target_3 (6 ms)
+[       OK ] TestGraph/0.target_3 (7 ms)
 [ RUN      ] TestGraph/0.vertex_1
 [       OK ] TestGraph/0.vertex_1 (4 ms)
 [ RUN      ] TestGraph/0.vertex_2
-[       OK ] TestGraph/0.vertex_2 (5 ms)
+[       OK ] TestGraph/0.vertex_2 (4 ms)
 [ RUN      ] TestGraph/0.vertex_3
-[       OK ] TestGraph/0.vertex_3 (7 ms)
+[       OK ] TestGraph/0.vertex_3 (8 ms)
 [ RUN      ] TestGraph/0.vertices_1
-[       OK ] TestGraph/0.vertices_1 (5 ms)
+[       OK ] TestGraph/0.vertices_1 (4 ms)
 [ RUN      ] TestGraph/0.vertices_2
 [       OK ] TestGraph/0.vertices_2 (5 ms)
 [ RUN      ] TestGraph/0.vertices_3
 [       OK ] TestGraph/0.vertices_3 (5 ms)
 [ RUN      ] TestGraph/0.constructor_1
-[       OK ] TestGraph/0.constructor_1 (4 ms)
+[       OK ] TestGraph/0.constructor_1 (3 ms)
 [ RUN      ] TestGraph/0.constructor_2
-[       OK ] TestGraph/0.constructor_2 (3 ms)
-[----------] 36 tests from TestGraph/0 (395 ms total)
+[       OK ] TestGraph/0.constructor_2 (4 ms)
+[----------] 33 tests from TestGraph/0 (363 ms total)
 
-[----------] 36 tests from TestGraph/1, where TypeParam = Graph
-[ RUN      ] TestGraph/1.add_edge_1
-TestGraph.c++:77: Failure
-Value of: p1.second
-  Actual: false
-Expected: true
-[  FAILED  ] TestGraph/1.add_edge_1, where TypeParam = Graph (155 ms)
-[ RUN      ] TestGraph/1.add_edge_2
-==383== Invalid read of size 8
-==383==    at 0x4074FC: std::vector<int, std::allocator<int> >::push_back(int const&) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x4062A8: add_edge(int, int, Graph&) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x432183: TestGraph_add_edge_2_Test<Graph>::TestBody() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x46A0DC: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x462A96: testing::Test::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x462B6C: testing::TestInfo::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x462CB6: testing::TestCase::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x462F46: testing::internal::UnitTestImpl::RunAllTests() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x469C5C: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x46213A: testing::UnitTest::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x404934: main (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
-==383== 
-==383== 
-==383== Process terminating with default action of signal 11 (SIGSEGV)
-==383==  Access not within mapped region at address 0x8
-==383==    at 0x4074FC: std::vector<int, std::allocator<int> >::push_back(int const&) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x4062A8: add_edge(int, int, Graph&) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x432183: TestGraph_add_edge_2_Test<Graph>::TestBody() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x46A0DC: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x462A96: testing::Test::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x462B6C: testing::TestInfo::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x462CB6: testing::TestCase::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x462F46: testing::internal::UnitTestImpl::RunAllTests() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x469C5C: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x46213A: testing::UnitTest::Run() (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==    by 0x404934: main (in /v/filer4b/v38q001/ll9338/cs378/cs378-graph/TestGraph)
-==383==  If you believe this happened as a result of a stack
-==383==  overflow in your program's main thread (unlikely but
-==383==  possible), you can try to increase the size of the
-==383==  main thread stack using the --main-stacksize= flag.
-==383==  The main thread stack size used in this run was 16777216.
-==383== 
-==383== HEAP SUMMARY:
-==383==     in use at exit: 28,554 bytes in 478 blocks
-==383==   total heap usage: 2,615 allocs, 2,137 frees, 184,303 bytes allocated
-==383== 
-==383== LEAK SUMMARY:
-==383==    definitely lost: 0 bytes in 0 blocks
-==383==    indirectly lost: 0 bytes in 0 blocks
-==383==      possibly lost: 12,328 bytes in 218 blocks
-==383==    still reachable: 16,226 bytes in 260 blocks
-==383==         suppressed: 0 bytes in 0 blocks
-==383== Rerun with --leak-check=full to see details of leaked memory
-==383== 
-==383== For counts of detected and suppressed errors, rerun with: -v
-==383== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 2 from 2)
-Segmentation fault (core dumped)
+[----------] 33 tests from TestGraph/1, where TypeParam = Graph
+[ RUN      ] TestGraph/1.test_add_edge1
+[       OK ] TestGraph/1.test_add_edge1 (114 ms)
+[ RUN      ] TestGraph/1.test_add_edge2
+[       OK ] TestGraph/1.test_add_edge2 (9 ms)
+[ RUN      ] TestGraph/1.test_add_edge3
+[       OK ] TestGraph/1.test_add_edge3 (14 ms)
+[ RUN      ] TestGraph/1.add_vertex_1
+[       OK ] TestGraph/1.add_vertex_1 (4 ms)
+[ RUN      ] TestGraph/1.add_vertex_2
+[       OK ] TestGraph/1.add_vertex_2 (6 ms)
+[ RUN      ] TestGraph/1.add_vertex_3
+[       OK ] TestGraph/1.add_vertex_3 (6 ms)
+[ RUN      ] TestGraph/1.edge_1
+[       OK ] TestGraph/1.edge_1 (7 ms)
+[ RUN      ] TestGraph/1.edge_2
+[       OK ] TestGraph/1.edge_2 (6 ms)
+[ RUN      ] TestGraph/1.edge_3
+[       OK ] TestGraph/1.edge_3 (6 ms)
+[ RUN      ] TestGraph/1.edges_1
+[       OK ] TestGraph/1.edges_1 (8 ms)
+[ RUN      ] TestGraph/1.edges_2
+[       OK ] TestGraph/1.edges_2 (4 ms)
+[ RUN      ] TestGraph/1.edges_3
+[       OK ] TestGraph/1.edges_3 (8 ms)
+[ RUN      ] TestGraph/1.num_edges_1
+[       OK ] TestGraph/1.num_edges_1 (5 ms)
+[ RUN      ] TestGraph/1.num_edges_2
+[       OK ] TestGraph/1.num_edges_2 (3 ms)
+[ RUN      ] TestGraph/1.num_edges_3
+[       OK ] TestGraph/1.num_edges_3 (4 ms)
+[ RUN      ] TestGraph/1.num_vertices_1
+[       OK ] TestGraph/1.num_vertices_1 (3 ms)
+[ RUN      ] TestGraph/1.num_vertices_2
+[       OK ] TestGraph/1.num_vertices_2 (5 ms)
+[ RUN      ] TestGraph/1.num_vertices_3
+[       OK ] TestGraph/1.num_vertices_3 (4 ms)
+[ RUN      ] TestGraph/1.num_vertices_4
+[       OK ] TestGraph/1.num_vertices_4 (4 ms)
+[ RUN      ] TestGraph/1.source_1
+[       OK ] TestGraph/1.source_1 (6 ms)
+[ RUN      ] TestGraph/1.source_2
+[       OK ] TestGraph/1.source_2 (5 ms)
+[ RUN      ] TestGraph/1.source_3
+[       OK ] TestGraph/1.source_3 (6 ms)
+[ RUN      ] TestGraph/1.target_1
+[       OK ] TestGraph/1.target_1 (5 ms)
+[ RUN      ] TestGraph/1.target_2
+[       OK ] TestGraph/1.target_2 (5 ms)
+[ RUN      ] TestGraph/1.target_3
+[       OK ] TestGraph/1.target_3 (6 ms)
+[ RUN      ] TestGraph/1.vertex_1
+[       OK ] TestGraph/1.vertex_1 (5 ms)
+[ RUN      ] TestGraph/1.vertex_2
+[       OK ] TestGraph/1.vertex_2 (6 ms)
+[ RUN      ] TestGraph/1.vertex_3
+[       OK ] TestGraph/1.vertex_3 (7 ms)
+[ RUN      ] TestGraph/1.vertices_1
+[       OK ] TestGraph/1.vertices_1 (9 ms)
+[ RUN      ] TestGraph/1.vertices_2
+[       OK ] TestGraph/1.vertices_2 (5 ms)
+[ RUN      ] TestGraph/1.vertices_3
+[       OK ] TestGraph/1.vertices_3 (6 ms)
+[ RUN      ] TestGraph/1.constructor_1
+[       OK ] TestGraph/1.constructor_1 (3 ms)
+[ RUN      ] TestGraph/1.constructor_2
+[       OK ] TestGraph/1.constructor_2 (3 ms)
+[----------] 33 tests from TestGraph/1 (302 ms total)
+
+[----------] Global test environment tear-down
+[==========] 66 tests from 2 test cases ran. (706 ms total)
+[  PASSED  ] 66 tests.
+==3270== 
+==3270== HEAP SUMMARY:
+==3270==     in use at exit: 0 bytes in 0 blocks
+==3270==   total heap usage: 3,155 allocs, 3,155 frees, 227,553 bytes allocated
+==3270== 
+==3270== All heap blocks were freed -- no leaks are possible
+==3270== 
+==3270== For counts of detected and suppressed errors, rerun with: -v
+==3270== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+File 'TestGraph.c++'
+Lines executed:100.00% of 238
+Branches executed:66.87% of 1980
+Taken at least once:33.54% of 1980
+Calls executed:50.11% of 1870
+Creating 'TestGraph.c++.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/backward/auto_ptr.h'
+Lines executed:100.00% of 9
+No branches
+Calls executed:100.00% of 2
+Creating 'auto_ptr.h.gcov'
+
+File '/usr/include/boost/graph/detail/adjacency_list.hpp'
+Lines executed:100.00% of 81
+Branches executed:100.00% of 66
+Taken at least once:54.55% of 66
+Calls executed:95.28% of 106
+Creating 'adjacency_list.hpp.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/ext/new_allocator.h'
+Lines executed:92.86% of 14
+Branches executed:100.00% of 20
+Taken at least once:50.00% of 20
+Calls executed:76.47% of 34
+Creating 'new_allocator.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_tree.h'
+Lines executed:95.65% of 161
+Branches executed:90.63% of 64
+Taken at least once:62.50% of 64
+Calls executed:92.93% of 99
+Creating 'stl_tree.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/allocator.h'
+Lines executed:66.67% of 6
+No branches
+Calls executed:100.00% of 16
+Creating 'allocator.h.gcov'
+
+File '/usr/include/gtest/gtest-printers.h'
+Lines executed:0.00% of 35
+Branches executed:0.00% of 70
+Taken at least once:0.00% of 70
+Calls executed:0.00% of 126
+Creating 'gtest-printers.h.gcov'
+
+File '/usr/include/boost/graph/detail/edge.hpp'
+Lines executed:77.78% of 9
+No branches
+Calls executed:37.50% of 8
+Creating 'edge.hpp.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/alloc_traits.h'
+Lines executed:76.47% of 17
+No branches
+Calls executed:83.33% of 36
+Creating 'alloc_traits.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/ostream'
+No executable lines
+No branches
+No calls
+Removing 'ostream.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/move.h'
+Lines executed:100.00% of 11
+No branches
+Calls executed:100.00% of 9
+Creating 'move.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_iterator.h'
+Lines executed:100.00% of 29
+No branches
+Calls executed:100.00% of 23
+Creating 'stl_iterator.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_set.h'
+Lines executed:100.00% of 16
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+Calls executed:100.00% of 10
+Creating 'stl_set.h.gcov'
+
+File '/usr/include/gtest/internal/gtest-internal.h'
+Lines executed:73.68% of 19
+Branches executed:83.17% of 796
+Taken at least once:41.58% of 796
+Calls executed:67.67% of 1661
+Creating 'gtest-internal.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_pair.h'
+Lines executed:100.00% of 13
+Branches executed:100.00% of 6
+Taken at least once:83.33% of 6
+Calls executed:98.28% of 58
+Creating 'stl_pair.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_construct.h'
+Lines executed:100.00% of 15
+Branches executed:100.00% of 14
+Taken at least once:64.29% of 14
+Calls executed:96.00% of 25
+Creating 'stl_construct.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_function.h'
+Lines executed:100.00% of 4
+No branches
+Calls executed:100.00% of 1
+Creating 'stl_function.h.gcov'
+
+File '/usr/include/boost/tuple/detail/tuple_basic.hpp'
+Lines executed:100.00% of 16
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+Calls executed:100.00% of 24
+Creating 'tuple_basic.hpp.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_uninitialized.h'
+Lines executed:81.25% of 32
+Branches executed:69.23% of 26
+Taken at least once:50.00% of 26
+Calls executed:72.88% of 59
+Creating 'stl_uninitialized.h.gcov'
+
+File '/usr/include/boost/optional/optional.hpp'
+Lines executed:93.88% of 49
+Branches executed:83.33% of 24
+Taken at least once:54.17% of 24
+Calls executed:82.86% of 35
+Creating 'optional.hpp.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_vector.h'
+Lines executed:92.22% of 90
+Branches executed:93.10% of 58
+Taken at least once:56.90% of 58
+Calls executed:90.96% of 177
+Creating 'stl_vector.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/basic_string.h'
+Lines executed:0.00% of 5
+Branches executed:0.00% of 4
+Taken at least once:0.00% of 4
+Calls executed:0.00% of 3
+Creating 'basic_string.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/streambuf'
+No executable lines
+No branches
+No calls
+Removing 'streambuf.gcov'
+
+File '/usr/include/boost/iterator/iterator_adaptor.hpp'
+Lines executed:100.00% of 8
+No branches
+Calls executed:100.00% of 4
+Creating 'iterator_adaptor.hpp.gcov'
+
+File '/usr/include/boost/pending/container_traits.hpp'
+Lines executed:100.00% of 18
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+Calls executed:100.00% of 19
+Creating 'container_traits.hpp.gcov'
+
+File '/usr/include/boost/range/irange.hpp'
+Lines executed:100.00% of 14
+No branches
+Calls executed:100.00% of 5
+Creating 'irange.hpp.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_list.h'
+Lines executed:80.00% of 20
+No branches
+Calls executed:88.89% of 9
+Creating 'stl_list.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/sstream'
+Lines executed:0.00% of 1
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 5
+Creating 'sstream.gcov'
+
+File '/usr/include/boost/iterator/iterator_facade.hpp'
+Lines executed:100.00% of 22
+Branches executed:100.00% of 8
+Taken at least once:50.00% of 8
+Calls executed:100.00% of 18
+Creating 'iterator_facade.hpp.gcov'
+
+File '/usr/include/boost/range/iterator_range_core.hpp'
+Lines executed:100.00% of 9
+No branches
+Calls executed:100.00% of 1
+Creating 'iterator_range_core.hpp.gcov'
+
+File '/usr/include/gtest/gtest.h'
+Lines executed:46.43% of 28
+Branches executed:15.66% of 166
+Taken at least once:7.83% of 166
+Calls executed:14.04% of 235
+Creating 'gtest.h.gcov'
+
+File '/usr/include/boost/operators.hpp'
+Lines executed:100.00% of 3
+No branches
+Calls executed:100.00% of 2
+Creating 'operators.hpp.gcov'
+
+File '/usr/include/boost/graph/detail/adj_list_edge_iterator.hpp'
+Lines executed:100.00% of 24
+Branches executed:95.65% of 46
+Taken at least once:67.39% of 46
+Calls executed:87.50% of 32
+Creating 'adj_list_edge_iterator.hpp.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/vector.tcc'
+Lines executed:81.36% of 59
+Branches executed:48.39% of 62
+Taken at least once:29.03% of 62
+Calls executed:61.70% of 94
+Creating 'vector.tcc.gcov'
+
+File '/usr/include/gtest/gtest-message.h'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 16
+Taken at least once:0.00% of 16
+Calls executed:0.00% of 25
+Creating 'gtest-message.h.gcov'
+
+File '/usr/include/boost/graph/named_graph.hpp'
+Lines executed:100.00% of 2
+No branches
+No calls
+Creating 'named_graph.hpp.gcov'
+
+File '/usr/include/boost/checked_delete.hpp'
+Lines executed:100.00% of 3
+No branches
+Calls executed:100.00% of 1
+Creating 'checked_delete.hpp.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/list.tcc'
+Lines executed:50.00% of 8
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+Calls executed:0.00% of 3
+Creating 'list.tcc.gcov'
+
+File '/usr/include/boost/smart_ptr/scoped_ptr.hpp'
+Lines executed:100.00% of 5
+No branches
+Calls executed:100.00% of 1
+Creating 'scoped_ptr.hpp.gcov'
+
+File '/usr/include/boost/graph/adjacency_list.hpp'
+Lines executed:100.00% of 8
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+Calls executed:85.71% of 7
+Creating 'adjacency_list.hpp.gcov'
+
+File 'Graph.h'
+Lines executed:100.00% of 59
+Branches executed:100.00% of 44
+Taken at least once:61.36% of 44
+Calls executed:90.74% of 54
+Creating 'Graph.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/iostream'
+Lines executed:100.00% of 1
+No branches
+Calls executed:100.00% of 2
+Creating 'iostream.gcov'
+
+File '/usr/include/boost/graph/named_function_params.hpp'
+Lines executed:100.00% of 3
+No branches
+Calls executed:100.00% of 1
+Creating 'named_function_params.hpp.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_algobase.h'
+Lines executed:100.00% of 27
+Branches executed:100.00% of 8
+Taken at least once:87.50% of 8
+Calls executed:100.00% of 12
+Creating 'stl_algobase.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_iterator_base_types.h'
+Lines executed:100.00% of 6
+No branches
+Calls executed:100.00% of 1
+Creating 'stl_iterator_base_types.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_iterator_base_funcs.h'
+Lines executed:0.00% of 4
+No branches
+Calls executed:0.00% of 2
+Creating 'stl_iterator_base_funcs.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/ext/type_traits.h'
+Lines executed:0.00% of 2
+No branches
+No calls
+Creating 'type_traits.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/basic_string.tcc'
+Lines executed:0.00% of 16
+Branches executed:0.00% of 16
+Taken at least once:0.00% of 16
+Calls executed:0.00% of 19
+Creating 'basic_string.tcc.gcov'
+
+File '/usr/include/gtest/internal/gtest-type-util.h'
+Lines executed:100.00% of 7
+Branches executed:100.00% of 12
+Taken at least once:50.00% of 12
+Calls executed:100.00% of 6
+Creating 'gtest-type-util.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/istream'
+No executable lines
+No branches
+No calls
+Removing 'istream.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/basic_ios.h'
+No executable lines
+No branches
+No calls
+Removing 'basic_ios.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/stl_algo.h'
+Lines executed:50.00% of 28
+Branches executed:63.64% of 22
+Taken at least once:45.45% of 22
+Calls executed:52.00% of 25
+Creating 'stl_algo.h.gcov'
+
+File '/usr/include/gtest/internal/gtest-port.h'
+Lines executed:45.45% of 11
+Branches executed:16.67% of 12
+Taken at least once:8.33% of 12
+Calls executed:14.29% of 7
+Creating 'gtest-port.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/iomanip'
+Lines executed:0.00% of 2
+No branches
+No calls
+Creating 'iomanip.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/ext/alloc_traits.h'
+Lines executed:100.00% of 2
+No branches
+No calls
+Creating 'alloc_traits.h.gcov'
+
+File '/usr/include/gtest/internal/gtest-string.h'
+Lines executed:41.94% of 31
+Branches executed:40.00% of 10
+Taken at least once:30.00% of 10
+Calls executed:23.08% of 13
+Creating 'gtest-string.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/typeinfo'
+Lines executed:100.00% of 2
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+No calls
+Creating 'typeinfo.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/ios_base.h'
+Lines executed:0.00% of 8
+No branches
+No calls
+Creating 'ios_base.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/new'
+Lines executed:66.67% of 3
+No branches
+No calls
+Creating 'new.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/ext/atomicity.h'
+Lines executed:0.00% of 10
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 3
+Creating 'atomicity.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/x86_64-unknown-linux-gnu/bits/gthr-default.h'
+Lines executed:0.00% of 2
+No branches
+No calls
+Creating 'gthr-default.h.gcov'
+
+File '/lusr/opt/gcc-4.8.2/include/c++/4.8.2/bits/char_traits.h'
+Lines executed:0.00% of 6
+No branches
+No calls
+Creating 'char_traits.h.gcov'
+

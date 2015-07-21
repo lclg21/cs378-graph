@@ -26,7 +26,7 @@ class Graph {
   // typedefs
   // --------
 
-  typedef int vertex_descriptor; 
+  typedef unsigned int vertex_descriptor; 
   typedef std::pair<vertex_descriptor,vertex_descriptor> edge_descriptor; 
 
   typedef std::vector<vertex_descriptor>::const_iterator vertex_iterator;  
@@ -50,8 +50,21 @@ class Graph {
   friend std::pair<edge_descriptor, bool> add_edge (vertex_descriptor v1, vertex_descriptor v2, Graph& graph) {
     edge_descriptor ed = std::make_pair(v1, v2);
     bool            b  = false;
-    graph._e.push_back(ed);
-    graph._g[ed.first].push_back(ed.second);
+
+    std::vector<edge_descriptor>::const_iterator b1 = graph._e.begin();
+    std::vector<edge_descriptor>::const_iterator e1 = graph._e.end();
+
+    std::vector<edge_descriptor>::const_iterator x = std::find(b1, e1, ed);
+    
+    if (x == e1){
+      b = true;
+      if (v1 >= graph._v.size() || v2 >= graph._v.size()){
+	std::size_t nSize  = std::max(v1, v2) + 1;
+	graph._v.resize(nSize); 
+      }
+      graph._e.push_back(ed);
+    }
+
     return std::make_pair(ed, b);}
 
   // ----------
@@ -97,15 +110,18 @@ class Graph {
     bool            b  = true;
 
     std::vector<edge_descriptor>::const_iterator b1 = graph._e.begin();
-    std::vector<edge_descriptor>::const_iterator e = graph._e.end();
+    std::vector<edge_descriptor>::const_iterator e1 = graph._e.end();
 
-    while(b1 != e){
-      if (*b1 == ed){
-        b = true;
-        break;
-      }
-      ++b1;
-    }    
+    std::vector<edge_descriptor>::const_iterator x = std::find(b1, e1, ed);
+
+    if (x == e1){
+      b = false;
+    }
+    else{
+      b = true;
+    }
+
+    
     return std::make_pair(ed, b);}
 
   // -----

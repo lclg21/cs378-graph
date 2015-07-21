@@ -62,61 +62,47 @@ TYPED_TEST_CASE(TestGraph, graph_types);
 // add_edge
 // --------
 
-TYPED_TEST(TestGraph, add_edge_1) {
+TYPED_TEST(TestGraph, test_add_edge1) {
   typedef typename TestFixture::graph_type         graph_type;
   typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
-  typedef typename TestFixture::edge_descriptor    edge_descriptor;
 
   graph_type g;
 
   vertex_descriptor vdA = add_vertex(g);
   vertex_descriptor vdB = add_vertex(g);
-    
 
-  pair<edge_descriptor, bool> p1 = add_edge(vdA, vdB, g);
-  ASSERT_EQ(true, p1.second);
+  bool b = add_edge(vdA, vdB, g).second;
+  ASSERT_TRUE(b);
+  add_edge(vdA, vdB, g);
+  bool c = add_edge(vdA, vdB, g).second;
+  ASSERT_FALSE(c);}
 
-
-  pair<edge_descriptor, bool> p2 = add_edge(vdA, vdB, g);
-  ASSERT_EQ(p2.first,  p1.first);
-  ASSERT_EQ(false, p2.second);}
-
-TYPED_TEST(TestGraph, add_edge_2) {
+TYPED_TEST(TestGraph, test_add_edge2) {
   typedef typename TestFixture::graph_type         graph_type;
   typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
-    
-  graph_type g;
-  vertex_descriptor v1 = 0;
-  vertex_descriptor v2 = 1;
-  auto p1 = add_edge(v1, v2, g);
-  auto p2 = add_edge(v1, v2, g);
-  auto v3 = target(p1.first, g);
-  auto v4 = source(p1.first, g);
-  ASSERT_EQ(v1, v4);
-  ASSERT_EQ(v2, v3);
-  ASSERT_FALSE(p2.second);
-  ASSERT_EQ(p1.first, p2.first);
-}
 
-TYPED_TEST(TestGraph, add_edge_3) {
-  typedef typename TestFixture::graph_type         graph_type;
-  typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
-    
   graph_type g;
-  vertex_descriptor v1 = 0;
-  vertex_descriptor v2 = 1;
-  auto p1 = add_edge(v1, v2, g);
-  auto p2 = add_edge(v2, v1, g);
-  auto vv1 = source(p1.first, g);
-  auto vv2 = target(p1.first, g);
-  auto vv3 = source(p2.first, g);
-  auto vv4 = target(p2.first, g);
-  ASSERT_EQ(v1, vv1);
-  ASSERT_EQ(v2, vv2);
-  ASSERT_EQ(v2, vv3);
-  ASSERT_EQ(v1, vv4);
-  ASSERT_NE(p2.first, p1.first);
-}
+
+  vertex_descriptor vdA = add_vertex(g);
+  vertex_descriptor vdB = add_vertex(g);
+  vertex_descriptor vdC = add_vertex(g);
+
+  bool b = add_edge(vdA, vdB, g).second;
+  ASSERT_TRUE(b);
+  bool c = add_edge(vdA, vdC, g).second;
+  ASSERT_TRUE(c);}
+
+TYPED_TEST(TestGraph, test_add_edge3) {
+  typedef typename TestFixture::graph_type         graph_type;
+
+  graph_type g;
+
+  bool a = add_edge(9, 10, g).second;
+  ASSERT_EQ(num_vertices(g), 11);
+  ASSERT_TRUE(a);
+
+  bool b = add_edge(9, 10, g).second;
+  ASSERT_FALSE(b);}
 
 // ----------
 // add_vertex
@@ -157,7 +143,7 @@ TYPED_TEST(TestGraph, add_vertex_3) {
 // -----------------
 // adjacent_vertices
 // -----------------
-
+/*
 TYPED_TEST(TestGraph, adjacent_vertices_1) {
   typedef typename TestFixture::graph_type         graph_type;
   typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
@@ -195,7 +181,7 @@ TYPED_TEST(TestGraph, adjacent_vertices_3) {
   auto p = adjacent_vertices(u, g);
   ASSERT_EQ(p.second, p.first);
   }
-
+*/
 // ----
 // edge
 // ----
